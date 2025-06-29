@@ -1,4 +1,4 @@
-# 📚 Book Review Service
+# Book Review Service
 
 A high-performance backend service for managing books and their reviews — built using **Python**, **FastAPI**, **SQLAlchemy**, **Redis**, and **Alembic**. This project demonstrates clean API design, database modeling, migrations, indexing, caching, testing, and scalability fundamentals.
 
@@ -6,14 +6,14 @@ A high-performance backend service for managing books and their reviews — buil
 
 ## 🚀 Features
 
-- 📘 **Book Management** - Add & retrieve books with validation
-- 📝 **Review System** - Add & fetch reviews for books  
-- 🧠 **Redis Caching** - High-performance caching with fallback logic
-- 📄 **API Documentation** - Interactive Swagger UI via FastAPI
-- 🗄️ **Database Migrations** - Version-controlled schema with Alembic
-- ⚡ **Performance Optimization** - Database indexing for fast queries
-- 🧪 **Comprehensive Testing** - Unit & integration test coverage
-- 💾 **Production Ready** - SQLite/PostgreSQL support with ORM
+- **Book Management** - Add & retrieve books with validation
+- **Review System** - Add & fetch reviews for books  
+- **Redis Caching** - High-performance caching with fallback logic
+- **API Documentation** - Interactive Swagger UI via FastAPI
+- **Database Migrations** - Version-controlled schema with Alembic
+- **Performance Optimization** - Database indexing for fast queries
+- **Comprehensive Testing** - Unit & integration test coverage
+- **Production Ready** - SQLite/PostgreSQL support with ORM
 
 ---
 
@@ -32,16 +32,16 @@ A high-performance backend service for managing books and their reviews — buil
 
 ---
 
-## 🧑‍💻 Getting Started
+## Getting Started
 
-### 1️⃣ Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone <your-repo-url>
 cd Book-Review-Service
 ```
 
-### 2️⃣ Create Virtual Environment
+### Create Virtual Environment
 
 ```bash
 # Create virtual environment
@@ -54,7 +54,7 @@ myenv\Scripts\activate
 source myenv/bin/activate
 ```
 
-### 3️⃣ Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -73,7 +73,7 @@ pytest-asyncio==0.21.1
 pydantic==2.5.0
 ```
 
-### 4️⃣ Setup Redis Server
+### Setup Redis Server
 
 Ensure Redis is installed and running locally on port `6379`.
 
@@ -93,7 +93,7 @@ sudo apt-get install redis-server
 sudo systemctl start redis-server
 ```
 
-### 5️⃣ Database Setup & Migrations
+### Database Setup & Migrations
 
 #### Initialize Alembic (First time only)
 
@@ -139,20 +139,20 @@ alembic revision --autogenerate -m "Add index on reviews.book_id"
 alembic upgrade head
 ```
 
-### 6️⃣ Start the Application
+### Start the Application
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
 **Access Points:**
-- 🌐 **API Base**: http://localhost:8000
-- 📖 **Swagger Documentation**: http://localhost:8000/docs
-- 📋 **ReDoc**: http://localhost:8000/redoc
+- **API Base**: http://localhost:8000
+- **Swagger Documentation**: http://localhost:8000/docs
+- **ReDoc**: http://localhost:8000/redoc
 
 ---
 
-## 🗄️ Database Migrations Guide
+## Database Migrations Guide
 
 ### Understanding Alembic Workflow
 
@@ -218,7 +218,7 @@ sqlalchemy.url = sqlite:///./books.db
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 ### Test Configuration
 
@@ -247,14 +247,14 @@ pytest tests/ --cov=app --cov-report=html
 
 The test suite includes:
 
-- ✅ **Unit Tests** - `test_get_books`, `test_add_book`
-- ✅ **Integration Tests** - `test_cache_miss`, `test_redis_fallback`
-- ✅ **API Tests** - End-to-end endpoint testing
-- ✅ **Database Tests** - Migration and model validation
+- **Unit Tests** - `test_get_books`, `test_add_book`
+- **Integration Tests** - `test_cache_miss`, `test_redis_fallback`
+- **API Tests** - End-to-end endpoint testing
+- **Database Tests** - Migration and model validation
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 Book-Review-Service/
@@ -286,7 +286,7 @@ Book-Review-Service/
 
 ---
 
-## 🔗 API Endpoints
+## API Endpoints
 
 ### Books
 
@@ -325,7 +325,7 @@ curl -X GET "http://localhost:8000/books/1/reviews/"
 
 ---
 
-## 💡 Design Decisions & Architecture
+## Design Decisions & Architecture
 
 ### Caching Strategy
 
@@ -354,7 +354,7 @@ curl -X GET "http://localhost:8000/books/1/reviews/"
 
 ---
 
-## 📈 Production Considerations & Scaling
+## Production Considerations & Scaling
 
 ### Immediate Improvements
 
