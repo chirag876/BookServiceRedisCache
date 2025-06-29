@@ -208,12 +208,12 @@ pip install psycopg2-binary
 
 2. **Update `app/database.py`:**
 ```python
-DATABASE_URL = "postgresql://username:password@localhost:5432/bookreview_db"
+DATABASE_URL = "sqlite:///./books.db"
 ```
 
 3. **Update `alembic.ini`:**
 ```ini
-sqlalchemy.url = postgresql://username:password@localhost:5432/bookreview_db
+sqlalchemy.url = sqlite:///./books.db
 ```
 
 ---
@@ -354,20 +354,6 @@ curl -X GET "http://localhost:8000/books/1/reviews/"
 
 ---
 
-## 🎥 Demo Video Walkthrough
-
-*For assignment presentation, cover these points:*
-
-1. ✅ **Project Structure** - Clean separation of concerns
-2. ✅ **Database Migrations** - Alembic workflow demonstration  
-3. ✅ **API Functionality** - Swagger UI interaction
-4. ✅ **Caching Demo** - Redis hit/miss scenarios
-5. ✅ **Performance** - Index usage and query optimization
-6. ✅ **Testing** - Unit and integration test execution
-7. ✅ **Error Handling** - Graceful failure scenarios
-
----
-
 ## 📈 Production Considerations & Scaling
 
 ### Immediate Improvements
@@ -394,40 +380,6 @@ curl -X GET "http://localhost:8000/books/1/reviews/"
 - **Real-time Updates** - WebSocket notifications for new reviews  
 - **Content Moderation** - ML-based review sentiment analysis
 - **Recommendation Engine** - Suggest books based on review patterns
-
----
-
-## 🚀 Deployment
-
-### Docker Deployment
-
-```dockerfile
-FROM python:3.11-slim
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-COPY . .
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
-```
-
-### Environment Variables
-
-```bash
-# Production settings
-DATABASE_URL=postgresql://user:pass@db:5432/bookreview
-REDIS_URL=redis://redis:6379/0
-DEBUG=False
-```
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
 
 ---
 
