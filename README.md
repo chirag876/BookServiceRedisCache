@@ -380,3 +380,8 @@ curl -X GET "http://localhost:8000/books/1/reviews/"
 - **Real-time Updates** - WebSocket notifications for new reviews  
 - **Content Moderation** - ML-based review sentiment analysis
 - **Recommendation Engine** - Suggest books based on review patterns
+
+### License
+
+This project is licensed under the [MIT License](./LICENSE).  
+© 2025 Chirag Gupta. Please credit if reused.
